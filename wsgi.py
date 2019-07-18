@@ -4,10 +4,10 @@ application = Flask(__name__)
 
 @application.route("/")
 def hello():
-    consumer = KafkaConsumer(bootstrap_servers='10.128.0.202:9092',
+    consumer = KafkaConsumer(bootstrap_servers='victoria.com:6667',
                                  auto_offset_reset='earliest',
                                  consumer_timeout_ms=1000)
-    consumer.subscribe(['test'])
+    consumer.subscribe(['my-topic'])
     consumer.close()
     return "Hello World!"
 
