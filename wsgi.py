@@ -1,5 +1,10 @@
 from flask import Flask
-from kafka import KafkaConsumer
+import os
+
+
+apps=os.getenv('test')
+print apps
+
 application = Flask(__name__)
 
 @application.route("/")
