@@ -1,9 +1,5 @@
 from flask import Flask
-import os
 
-
-apps=os.getenv('test')
-print apps
 
 application = Flask(__name__)
 
